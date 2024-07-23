@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/tip4teach_-_JPEG-01-removebg-preview 7.png" type="image/icon type">
+    <title>Tip4Teach</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!--header-->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container">
+          <a class="navbar-brand" href="index.html"><img src="img/tip4teach_-_JPEG-01-removebg-preview 7.png" alt=""></a>
+          <button class="navbar-toggler" type="button" id="sm-nav-btn">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse">
+          <a class="navbar-brand" href="index.html"><img class="img-fluid sm-nav-logo d-lg-none" src="img/tip4teach_-_JPEG-01-removebg-preview 7.png" alt=""></a>
+            <ul class="navbar-nav page-nav align-items-center mx-auto mb-lg-0">
+                <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="tip.html">Tip Now</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+            </ul>
+            <div class="navbar-close-btn position-absolute d-block d-lg-none">
+              <img src="img/close.svg" class="img-fluid" alt=" ">
+            </div>
+            <div class="banner">
+              <a href="role.html" class='log-btn butn butn__new'><span>LOGIN/ SIGNUP</span></a>
+            </div>
+        </div>
+          </div>
+      </nav>
+    </header>
+    <!--checkout-section-->
+    <section class="check-out">
+        <div class="container">
+            <div class="row d-lg-flex justify-content-between ">
+                <div class="col-12 col-lg-6">
+                    <form class="checkout-form profile-form row shadow-none ">
+                        <div class="checkout-header mb-3 section-title d-flex align-items-center justify-content-between ">
+                            <h2>Sign up</h2>
+                            <a href="tipper-signin.html">Login</a>
+                        </div>
+                        <div class="col-12 mb-3">
+                          <input type="text" name="username" class="form-control" placeholder="Your Name">
+                        </div>
+                        <div class="col-12 mb-3">
+                          <input type="email" name="email" class="form-control" placeholder="Email Address">
+                        </div>
+                        <div class="col-12 mb-3">
+                          <input type="password" class="form-control" placeholder="Password">
+                        </div>
+                        <div class="col-12 mb-3 payments mt-5">
+                            <h3>Payment Method</h3>
+                            <button class="active"><img src="img/icons8-mastercard-48 3.svg" alt="mastercard"></button>
+                            <button ><img src="img/icons8-visa-48 3.svg" alt="visa"></button>
+                            <button ><img src="img/icons8-paypal-48 4.svg" alt="paypal"></button>
+                            <button ><img src="img/icons8-stripe-48 3.svg" alt="stripe"></button>
+                            <button ><img src="img/icons8-apple-pay-64 4.svg" alt="apple-pay"></button>
+                        </div>
+                        <div class="col-12 mb-3 card-name">
+                          <h3>Cardholder Name</h3>
+                          <input type="text" class="form-control">
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                          <h3>Cardholder Number</h3>
+                          <input type="text" class="form-control">
+                        </div>
+                        <div class="col-12 col-md-3 mb-3 align-self-end ">
+                          <h3>Date</h3>
+                          <input type="date" class="date-input form-control">
+                        </div>
+                        <div class="col-12 col-md-3 mb-3">
+                          <h3>CVC <span><img src="img/icons8-information-50 1.svg" class="img-fluid cvc-img" alt="icons8"></span></h3>
+                          <input type="text" class="form-control">
+                        </div>
+                        <div class="col-12 mb-3">
+                            <span><img src="img/icons8-information-50 1.svg" class="me-1" alt="icons8"></span>
+                            <span class="inform">Credit Card payments may take up to 24h to be processed</span>
+                        </div>
+                        <div class="col-12 mb-3 d-flex align-items-center gap-2 ">
+                          <input class="form-check-input" type="checkbox" value="" id="savecheck" checked>
+                          <label class="form-check-label save-payment" for="savecheck">
+                            Save my payment details for future purchases
+                          </label>
+                        </div>
+                        <a href="tipping.html">
+                            <span><img src="img/icons8-back-48 1.svg" class="me-1" alt="icons8"></span>
+                            <span class="return">Return to add funds</span>
+                        </a>
+                      </form>
+                </div>
+                <div class="col-12 col-lg-4">
+                  <div class="tip-summery">
+                    <h1>Tip Summary</h1>
+                    <div class="blnc-calc">
+                      <div class="d-flex justify-content-between">
+                        <span class="text-14">Balanced amount:</span>
+                        <span>$100</span>
+                      </div>
+                      <div class="d-flex align-items-center justify-content-between">
+                        <span class="text-14">VAT<br> (21%):</span>
+                        <span>$21</span>
+                      </div>
+                    </div>
+                    <div>
+                      <span class="d-flex align-items-center justify-content-between">
+                        <span class="tip-total">Total <br><span class="text-14">(Incl. VAT)</span> </span>
+                      <span class="total-tip-num">$121</span>
+                      </span>
+                    </div>
+                    <div class="after-topup d-flex justify-content-between ">
+                      <div>
+                        <p class="text-14">Account after top up</p>
+                        <span>Lorem Ipsum</span>
+                      </div>
+                      <div>$100</div>
+                    </div>
+                    <div class="banner" id="popup-thank-tech-btn">
+                      <a href="#" class="log-btn butn butn__new w-100 "><span>confirm your tip</span></a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="tch-dash-contact-popup" id="tach-contact-thank">
+          <div class="container">
+              <div class="tch-contact-popup text-center">
+                <div class="img-container mb-3">
+                  <img src="img/image 19.png" class="img-fluid " alt="">
+                </div>
+                  <h3 class="mb-4">Thankyou !!</h3>
+                  <p class="mb-4">Your Tip will be transferred to Teacher ASAP</p>
+                  <div class="banner">
+                      <a href="#" class="log-btn butn butn__new popup-white" id="tech-popup-thank"><span>Close</span></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </section>
+    <!--footer-->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-12">
+            <h2>Tip4Teach</h2>
+            <h4>Follow Us on</h4>
+            <div class="socials">
+              <a href="#"><img src="img/icons8-facebook-50.png" alt="facebook"></a>
+              <a href="#"><img src="img/icons8-twitter-50.png" alt="twitter"></a>
+              <a href="#"><img src="img/icons8-linkedin-50.png" alt="linkedin"></a>
+              <a href="#"><img src="img/icons8-youtube-50.png" alt="youtube"></a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12">
+            <h3>Useful Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="index.html">Tip Now</a></li>
+              <li><a href="index.html">About Us</a></li>
+              <li><a href="index.html">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-12 col-12">
+            <h3>contact@tip4teach.com</h3>
+            <h4>Secure payments by</h4>
+            <div class="payments">
+              <a href="#"><img src="img/icons8-mastercard-50 (1).png" alt="mastercard"></a>
+              <a href="#"><img src="img/icons8-visa-50 (1).png" alt="visa"></a>
+              <a href="#"><img src="img/icons8-paypal-50 (1).png" alt="paypal"></a>
+              <a href="#"><img src="img/icons8-stripe-50 (1).png" alt="stripe"></a>
+              <a href="#"><img src="img/icons8-apple-pay-50 (1).png" alt="apple-pay"></a>
+            </div>
+          </div>
+        </div>
+        <div class="copyright text-center">All Rights Reserved <img src="img/icons8-copyright-50 2.png" alt="copyright">2024</div>
+      </div>
+    </footer>
+    <!--Jquery-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!--Separate Popper and Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <!--custom js-->
+    <script src="js/script.js"></script>
+</body>
+</html>
