@@ -1530,9 +1530,15 @@ table td:has( .inprogress){
         width: 15px;
         margin-bottom: 5px;
     }
-    /* OTP Responsive Css */
+    /* Start OTP Responsive Css */
+    .verify_page{
+        padding-bottom: 52px;
+    }
     .verifi_box{
         padding: 24px 24px 32px 24px;
+    }
+    .verify_page .section-title{
+        margin-bottom: 32px;
     }
     .verifi_title{
         font-size: 18px;
@@ -1549,6 +1555,7 @@ table td:has( .inprogress){
         font-size: 12px;
         padding: 12px 20px;
     }
+    /* End OTP Responsive Css */
 }
 @media (min-width:539px) and (max-width:991px) {
     .chart-dates .bar {
