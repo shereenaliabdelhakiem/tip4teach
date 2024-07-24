@@ -166,16 +166,28 @@ li{
 /* End New Section */
 /* Start OTP Verifcation */
 .verify_page{
-    padding-block: 12vh;
+    padding-top: 40px;
+    padding-bottom: 100px
 }
 .verifi_box{
     width: fit-content;
     margin-inline: auto;
-    border: 1px solid #e4ebe4;
     background-color: var(--white-color);
     padding: 40px 80px;
-    border-radius: 16px;
+    border-radius: 8px;
     margin-bottom: 32px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.disclaimer{
+    background-color: rgb(252 165 165 / 1);
+    color: rgb(153 27 27 / 1);
+    width: fit-content;
+    border-radius: 16px;
+    margin-bottom: 40px;
+    padding: 16px 32px;
+    margin-inline: auto;
+    font-weight: 700;
+    font-size: 16px;
 }
 .verifi_box .form_group{
     margin-bottom: 48px;
@@ -1517,6 +1529,25 @@ table td:has( .inprogress){
         height: 15px;
         width: 15px;
         margin-bottom: 5px;
+    }
+    /* OTP Responsive Css */
+    .verifi_box{
+        padding: 24px 24px 32px 24px;
+    }
+    .verifi_title{
+        font-size: 18px;
+    }
+    .verify_btn, .verify_heading{
+        font-size: 14px;
+    }
+    .otp{
+        width: 36px;
+        height: 36px;
+    }
+    .disclaimer{
+        border-radius: 8px;
+        font-size: 12px;
+        padding: 12px 20px;
     }
 }
 @media (min-width:539px) and (max-width:991px) {
