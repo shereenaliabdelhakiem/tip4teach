@@ -65,8 +65,9 @@
             <input class="otp input_email" type="text" oninput='digitValidate(this)' onkeyup='tabChange(5)' maxlength=1 >
             <input class="otp input_email" type="text" oninput='digitValidate(this)'onkeyup='tabChange(6)' maxlength=1 >
           </div>
-          <div class="banner">
-            <button class="verify_btn" type="submit"><span>Verify your email</span></a>
+          <div class="verify_btns d-flex align-items-center justify-content-start">
+            <button class="forgt-pass border-0 bg-transparent fw-bold text-decoration-underline">Resend</button>
+            <button class="verify_btn" id="ver_email_btn" type="submit">Verify your email</a>
           </div>
         </form>
       </div>
@@ -82,12 +83,64 @@
             <input class="otp input_phone" type="text" oninput='digitValidate2(this)' onkeyup='tabChange2(5)' maxlength=1 >
             <input class="otp input_phone" type="text" oninput='digitValidate2(this)'onkeyup='tabChange2(6)' maxlength=1 >
           </div>
-          <div class="banner">
-            <button class="verify_btn" type="submit"><span>Verify your phone number</span></a>
-          </div>
+            <div class="verify_btns d-flex align-items-center justify-content-center">
+              <button class="forgt-pass border-0 bg-transparent fw-bold text-decoration-underline">Resend</button>
+              <button class="verify_btn" id="ver_phone_btn" type="submit">Verify your phone number</a>
+            </div>
         </form>
       </div>
+      <div class="banner">
+        <a href="#" class="log-btn butn butn__new"><span>Continue</span></a>
+      </div>
     </section>
+    <div class="ver_pop_container" id="ver_email">
+      <div class="verify_popup">
+        <div class="img_container">
+          <img src="img/verified_img.webp" class="img-fluid" alt="verification-img">
+        </div>
+        <h3>Verified</h3>
+        <p>Your email address was successfuly verified</p>
+        <div class="banner">
+          <a href="#" class="log-btn butn butn__new" id="veri_email_close"><span>Close</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="ver_pop_container" id="ver_phone">
+      <div class="verify_popup">
+        <div class="img_container">
+          <img src="img/verified_img.webp" class="img-fluid" alt="verification-img">
+        </div>
+        <h3>Verified</h3>
+        <p>Your Phone number was successfuly verified</p>
+        <div class="banner">
+          <a href="#" class="log-btn butn butn__new" id="veri_phone_close"><span>Close</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="ver_pop_container" id="not_ver_email">
+      <div class="verify_popup">
+        <div class="img_container">
+          <img src="img/not-verified1.webp" class="img-fluid" alt="verification-img">
+        </div>
+        <h3>Can't verify email</h3>
+        <p>The 6-digit code you entered <b>doesn't match</b> the 6-digit code sent to you</p>
+        <div class="banner">
+          <a href="#" class="log-btn butn butn__new" id="not_veri_email_close"><span>Close</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="ver_pop_container" id="not_ver_phone">
+      <div class="verify_popup">
+        <div class="img_container">
+          <img src="img/not-verified1.webp" class="img-fluid" alt="verification-img">
+        </div>
+        <h3>Can't verify phone number</h3>
+        <p>The 6-digit code you entered <b>doesn't match</b> the 6-digit code sent to you</p>
+        <div class="banner">
+          <a href="#" class="log-btn butn butn__new" id="not_veri_phone_close"><span>Close</span></a>
+        </div>
+      </div>
+    </div>
     <!--footer-->
     <footer>
       <div class="container">
@@ -161,6 +214,30 @@
             ele[val-2].focus()
           }   
       }
+      $("#ver_email_btn").click(function(e){
+        e.preventDefault();
+        $("#ver_email").css("display", "block");
+      });
+      $("#veri_email_close").click(function(e){
+        e.preventDefault();
+        $("#ver_email").css("display", "none");
+      });
+      $("#ver_phone_btn").click(function(e){
+        e.preventDefault();
+        $("#ver_phone").css("display", "block");
+      });
+      $("#veri_phone_close").click(function(e){
+        e.preventDefault();
+        $("#ver_phone").css("display", "none");
+      });
+      $("#not_veri_email_close").click(function(e){
+        e.preventDefault();
+        $("#not_ver_email").css("display", "none");
+      });
+      $("#not_veri_phone_close").click(function(e){
+        e.preventDefault();
+        $("#not_ver_phone").css("display", "none");
+      })
     </script>
 </body>
 </html>
