@@ -301,10 +301,25 @@ input[type="tel"]{
             font-size: 12px;
             padding: 8px 24px;
         }
-        .sign-in .form-group label, .sign-in .form-group + a, .sign_container input:not([type="checkbox"]){
+        .sign-in .form-group label, .sign-in .form-group + a, .sign_container input:not([type="checkbox"]), .flag span{
             font-size: 12px;
+        }
+        .sign_container input:not([type="checkbox"]){
+            padding: 10px;
+        }
+        .phone-input-container:before{
+            left: 40px;
+        }
+        input[type="tel"]{
+            padding-left: 48px !important;
+        }
+        .flag img{
+            width: 12px;
         }
         .sign-in .form-group + a{
             padding-left: 12px;
+        }
+        .flag{
+            width: 40px;
         }
 }
