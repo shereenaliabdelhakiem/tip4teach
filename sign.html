@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="icon" href="img/tip4teach_-_JPEG-01-removebg-preview 7.png" type="image/icon type">  
+
+    <title>Login & Register </title>
+</head>
+
+<body>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form>
+                <h1>Create Account</h1>
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Enter E-mail">
+                <div class="phone-input-container">
+                    <img src="img/usa_flag.svg" class="flag img-fluid">
+                    <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="\+1 \d{3}-\d{3}-\d{4}" required>
+                </div>
+                <input type="password" placeholder="Enter Password">
+                <button>Sign Up</button>
+            </form>
+        </div>
+
+
+        <div class="form-container sign-in">
+            <form>
+                <h1>Sign In</h1>
+                <input type="email" placeholder="Enter E-mail">
+                <div class="phone-input-container">
+                    <img src="img/usa_flag.svg" class="flag img-fluid">
+                    <input type="tel" id="phone" name="phone" placeholder="+1 123-456-7890" pattern="\+1 \d{3}-\d{3}-\d{4}" required>
+                </div>
+                <input type="password" placeholder="Enter Password">
+                <a href="#">Forget Password?</a>
+                <button>Sign In</button>
+            </form>
+        </div>
+
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Welcome Back!</h1>
+                    <p>We’re delighted to see you again!</p>
+                    <button class="hidden" id="login">Sign In</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Hi Teachers!</h1>
+                    <p>We're thrilled to have you join our community of educators.</p>
+                    <button class="hidden" id="register">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const container = document.getElementById('container');
+        const registerBtn = document.getElementById('register');
+        const loginBtn = document.getElementById('login');
+
+        registerBtn.addEventListener('click', () => {
+            container.classList.add("active");
+        });
+
+        loginBtn.addEventListener('click', () => {
+            container.classList.remove("active");
+        });
+        document.getElementById('phone').addEventListener('input', function (e) {
+            const input = e.target.value;
+            const regex = /^\+1 \d{3}-\d{3}-\d{4}$/;
+            if (input && !regex.test(input)) {
+                e.target.setCustomValidity('Please enter a valid US phone number in the format: +1 123-456-7890');
+            } else {
+                e.target.setCustomValidity('');
+            }
+        });
+
+    </script>
+</body>
+
+</html>
