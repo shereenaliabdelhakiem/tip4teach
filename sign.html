@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/form.css">
 </head>
 
-<body class="sign_theme">
+<body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container">
@@ -50,32 +50,38 @@
             </div>
         </nav>
     </header>
-    <div class="container sign_container" id="container">
+    <img src="img/sign_book.svg" class="position-absolute sign_book d-none d-lg-block" alt="">
+    <img src="img/signLight.svg" class="position-absolute sign_light d-none d-lg-block" alt="">
+    <div class="outer_sign_container">
+      <div class="container sign_container" id="container">
         <div class="form-container sign-up">
             <form>
                 <h1>Create Account</h1>
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Enter E-mail">
-                <div class="phone-input-container">
-                    <img src="img/usa_flag.svg" class="flag img-fluid">
-                    <input type="tel" id="phone" name="phone" placeholder="+1 123-456-7890" pattern="\+1 \d{3}-\d{3}-\d{4}" required>
+                <input type="text" placeholder="First Name" class="mb-3">
+                <input type="text" placeholder="Last Name" class="mb-3">
+                <input type="email" placeholder="Email" class="mb-3">
+                <div class="phone-input-container mb-4">
+                    <div class="flag">
+                      <img src="img/usa_flag.svg" class="img-fluid"> <span>+1</span>
+                    </div>
+                    <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="\+1 \d{3}-\d{3}-\d{4}" required>
                 </div>
-                <input type="password" placeholder="Enter Password">
+                <input type="password" placeholder="Password" class="mb-2">
                 <button>Sign Up</button>
             </form>
         </div>
-
-
         <div class="form-container sign-in">
             <form>
                 <h1>Sign In</h1>
-                <input type="email" placeholder="Enter E-mail">
-                <div class="phone-input-container">
-                    <img src="img/usa_flag.svg" class="flag img-fluid">
-                    <input type="tel" id="phone" name="phone" placeholder="+1 123-456-7890" pattern="\+1 \d{3}-\d{3}-\d{4}" required>
+                <input type="email" placeholder="Email" class="mb-3 mb-lg-4">
+                <input type="password" placeholder="Password" class="mb-3 mb-lg-4">
+                <div class="d-flex flex-column flex-md-row align-items-md-center w-100 justify-content-md-between mb-4">
+                  <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input mb-3 mb-lg-0" id="rememberme">
+                    <label class="form-check-label" for="rememberme">Remember me</label>
+                  </div>
+                  <a href="forgetpassword.html" class="forgt-pass">Forgot Password?</a>
                 </div>
-                <input type="password" placeholder="Enter Password">
-                <a href="#">Forget Password?</a>
                 <button>Sign In</button>
             </form>
         </div>
@@ -83,17 +89,22 @@
         <div class="toggle-container">
             <div class="toggle">
                 <div class="toggle-panel toggle-left">
+                  <div class="form_text">
                     <h1>Welcome Back!</h1>
                     <p>We’re delighted to see you again!</p>
                     <button class="hidden" id="login">Sign In</button>
+                  </div>
                 </div>
                 <div class="toggle-panel toggle-right">
+                  <div class="form_text">
                     <h1>Hi Teachers!</h1>
                     <p>We're thrilled to have you join our community of educators.</p>
                     <button class="hidden" id="register">Sign Up</button>
+                  </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <footer>
         <div class="container">

@@ -13,10 +13,10 @@
     box-shadow: 0 5px 15px #ccc;
     position: relative;
     overflow: hidden;
-    width: 768px;
+    width: 870px;
     max-width: 100%;
     min-height: 480px;
-    margin-block: 100px;
+    /* margin-block: 100px; */
 }
 
 .sign_container p{
@@ -29,24 +29,22 @@
 .sign_container span{
     font-size: 12px;
 }
-
+/* 
 .sign_container a{
     color: #333;
     font-size: 13px;
     text-decoration: none;
-    margin: 15px 0 10px;
-}
+} */
 
 .sign_container button{
     /* background-color: #335E4A; */
     background-color: #F1CA38;
     color: #fff;
-    font-size: 12px;
+    font-size: 16px;
+    font-weight: 700;
     padding: 10px 45px;
     border: 1px solid transparent;
     border-radius: 8px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
     text-transform: uppercase;
     margin-top: 10px;
     cursor: pointer;
@@ -69,8 +67,7 @@
     height: 100%;
 }
 
-.sign_container input{
-    margin: 8px 0;
+.sign_container input:not([type="checkbox"]){
     padding: 10px 15px;
     width: 100%;
     outline: none;
@@ -82,6 +79,13 @@
     box-shadow: none;
     color: #282B29;
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+/* input([type="checkbox"]):focus{
+    box-shadow: none;
+    outline: none;
+} */
+.form-check .form-check-input:checked{
+
 }
 .container input:focus{
     border-color: #F1CA38;
@@ -145,7 +149,6 @@
 }
 
 .toggle{
-    /* background-color: rgba(255, 4, 4, 0.952); */
     background-color: #335E4A;
     height: 100%;
     color: #fff;
@@ -155,12 +158,6 @@
     width: 200%;
     transform: translateX(0);
     transition: all 0.6s ease-in-out;
-}
-.sign_theme .toggle{
-    background-color: rgb(19, 92, 18);
-}
-.sign_theme form h1, .navbar-light .navbar-nav .nav-link{
-    color: rgb(19, 92, 18) !important;
 }
 .sign_container.active .toggle{
     transform: translateX(50%);
@@ -199,12 +196,15 @@
 form h1{
     font-size: 32px;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 28px;
     color: #2F7152;
 }
 .phone-input-container{
     width: 100%;
     position: relative;
+    margin-block: 8px;
+    border-radius: 8px;
+    overflow: hidden;
 }
 .phone-input-container:before{
     position: absolute;
@@ -212,16 +212,99 @@ form h1{
     height: 40.8px;
     width: 1px;
     background-color: #ced4da;
-    left: 54px;
-    top: 9px;
+    left: 70px;
+    top: 0;
 }
 .flag{
-    height: 22px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.05);
     position: absolute;
-    top: 16px;
-    left: 10px;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    width: 70px;
+    display: flex;
+    align-items: center;
+}
+.flag img{
+    width: 24px;
+    margin-right: 4px;
+}
+.flag span{
+    font-weight: 700;
+    font-size: 16px;
 }
 input[type="tel"]{
     height: 40.8px;
-    padding-left: 60px;
+    padding-left: 80px !important;
+    margin-block: 0;
+}
+/* .toggle-right{
+    position: relative;
+} */
+.toggle-right:before,.toggle-left:before{
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.1;
+} 
+.toggle-right:before{
+    content: url( " ../img/Green rec.png");
+}
+.form_text{
+    position: relative;
+    z-index: 10;
+}
+.toggle-left:before{
+    content: url( " ../img/Green rec (1).png");
+}
+.sign_light{
+    width: 200px;
+    top: 50%;
+    right: -90px;
+    opacity: 0.55;
+}
+.sign_book{
+    width: 200px;
+    top: 20%;
+    left: -60px;
+    opacity: 0.55;
+}
+.outer_sign_container{
+    padding-block: 100px;
+}
+@media only screen and (max-width: 768px){
+        /* Start Sign Page */
+        .outer_sign_container{
+            padding-inline: 12px;
+        }
+        form h1{
+            font-size: 24px;
+        }
+        .sign_container form{
+            padding: 0 8px;
+        }
+        .toggle-panel{
+            padding: 0 10px;
+        }
+        .sign_book, .sign_light{
+            width: 124px;
+        }
+        .toggle-panel h1{
+            font-size: 24px;
+        }
+        .sign_container p{
+            font-size: 12px;
+            margin: 10px 0;
+        }
+        .sign_container button{
+            font-size: 12px;
+            padding: 8px 24px;
+        }
+        .sign-in .form-group label, .sign-in .form-group + a, .sign_container input:not([type="checkbox"]){
+            font-size: 12px;
+        }
+        .sign-in .form-group + a{
+            padding-left: 12px;
+        }
 }
