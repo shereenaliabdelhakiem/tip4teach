@@ -154,12 +154,18 @@ input[type="tel"]{
 .toggle-right:before{
     content: url( " ../img/Green rec.png");
 }
+.toggle-right.tipper_toggle_right:before{
+    content: url( " ../img/Green rec (3).png");
+}
 .form_text{
     position: relative;
     z-index: 10;
 }
 .toggle-left:before{
     content: url( " ../img/Green rec (1).png");
+}
+.toggle-left.tipper_toggle_left:before{
+    content: url( " ../img/Green rec (2).png");
 }
 .sign_light{
     width: 200px;
@@ -276,7 +282,10 @@ input[type="tel"]{
         transition: all 0.6s ease-in-out;
     }
 }
-@media only screen and (max-width: 768px){
+.outer_sign_container{
+    padding-inline: 32px;
+}
+@media only screen and (max-width: 767px){
         /* Start Sign Page */
         .outer_sign_container{
             padding-inline: 12px;
@@ -353,8 +362,14 @@ input[type="tel"]{
         .sign-up::before{
             content: url( " ../img/Green rec.png");
         }
+        .sign-up.tipper_sign_up:before{
+            content: url( " ../img/Green rec (3).png");
+        }
         .sign-in::before{
             content: url( " ../img/Green rec (1).png");
+        }
+        .sign-in.tipper_sign_in:before{
+            content: url( " ../img/Green rec (2).png");
         }
         .sign-up:after, .sign-in::after{
             background-color: #335E4A;
@@ -390,4 +405,15 @@ input[type="tel"]{
         .sign_container .form-text button{
             margin-top: 0;
         }
+}
+@media(min-width:1023px) and (max-width: 1239px){
+    .sign_light, .sign_book{
+        width: 90px;
+    }
+    .sign_book{
+        left: -30px;
+    }
+    .sign_light{
+        right: -30px;
+    }
 }
