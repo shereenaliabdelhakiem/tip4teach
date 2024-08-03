@@ -301,10 +301,6 @@ input[type="tel"]{
             font-size: 12px;
             margin: 10px 0;
         }
-        /* .sign_container button{
-            font-size: 12px;
-            padding: 8px 24px;
-        } */
         .sign-in .form-group label, .sign-in .form-group + a, .sign_container input:not([type="checkbox"]), .flag span{
             font-size: 12px;
         }
@@ -382,5 +378,16 @@ input[type="tel"]{
         }
         .sign_container .form-check{
             margin-bottom: 0;
+        }
+        .sign_container button{
+            width: 100%;
+        }
+        .sign_container .form-text span{
+            display: block;
+            margin-inline: auto;
+            margin-block: 8px;
+        }
+        .sign_container .form-text button{
+            margin-top: 0;
         }
 }
