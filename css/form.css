@@ -320,9 +320,6 @@ input[type="tel"]{
         .flag img{
             width: 12px;
         }
-        .sign-in .form-group + a{
-            padding-left: 12px;
-        }
         .flag{
             width: 40px;
         }
@@ -382,5 +379,8 @@ input[type="tel"]{
         }
         .sign-up .form-text, form h1, .sign-in .form-text, .sign-in .form-group label, .sign-in .form-group + a{
             color: #fff;
+        }
+        .sign_container .form-check{
+            margin-bottom: 0;
         }
 }
