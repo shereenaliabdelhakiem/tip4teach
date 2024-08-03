@@ -54,7 +54,7 @@
     <img src="img/signLight.svg" class="position-absolute sign_light d-none d-lg-block" alt="">
     <div class="outer_sign_container">
       <div class="container sign_container" id="container">
-        <div class="form-container sign-up">
+        <div class="form-container sign-up active">
             <form>
                 <h1>Create Account</h1>
                 <input type="text" placeholder="First Name" class="mb-3">
@@ -68,6 +68,7 @@
                 </div>
                 <input type="password" placeholder="Password" class="mb-2">
                 <button>Sign Up</button>
+                <p class="form-text d-md-none">Already have an account? <button class="text-decoration-underline bg-transparent px-0 ps-1 signin_btn">Sign In</button></p>
             </form>
         </div>
         <div class="form-container sign-in">
@@ -75,7 +76,7 @@
                 <h1>Sign In</h1>
                 <input type="email" placeholder="Email" class="mb-3 mb-lg-4">
                 <input type="password" placeholder="Password" class="mb-3 mb-lg-4">
-                <div class="d-flex flex-column flex-md-row align-items-md-center w-100 justify-content-md-between mb-4">
+                <div class="d-flex align-items-center w-100 justify-content-between mb-4">
                   <div class="form-group form-check">
                     <input type="checkbox" class="form-check-input mb-3 mb-lg-0" id="rememberme">
                     <label class="form-check-label" for="rememberme">Remember me</label>
@@ -83,6 +84,8 @@
                   <a href="forgetpassword.html" class="forgt-pass">Forgot Password?</a>
                 </div>
                 <button>Sign In</button>
+                <p class="form-text d-md-none"> Don't have a Teacher account? <button class="text-decoration-underline bg-transparent px-0 ps-1 signup_btn">Sign Up</button></p>
+
             </form>
         </div>
 
@@ -170,6 +173,17 @@
             } else {
                 e.target.setCustomValidity('');
             }
+        });
+        document.querySelector('.signin_btn').addEventListener('click', function() {
+          event.preventDefault();
+          document.querySelector('.sign-up').classList.remove('active');
+          document.querySelector('.sign-in').classList.add('active');
+        });
+
+        document.querySelector('.signup_btn').addEventListener('click', function() {
+          event.preventDefault();
+          document.querySelector('.sign-in').classList.remove('active');
+          document.querySelector('.sign-up').classList.add('active');
         });
 
     </script>

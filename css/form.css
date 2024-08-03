@@ -7,17 +7,6 @@
     /* font-family: 'Montserrat', sans-serif; */
 }
 
-.sign_container{
-    background-color: #fff;
-    border-radius: 30px;
-    box-shadow: 0 5px 15px #ccc;
-    position: relative;
-    overflow: hidden;
-    width: 870px;
-    max-width: 100%;
-    min-height: 480px;
-    /* margin-block: 100px; */
-}
 
 .sign_container p{
     font-size: 14px;
@@ -90,93 +79,7 @@
 .container input:focus{
     border-color: #F1CA38;
 }
-.form-container{
-    position: absolute;
-    top: 0;
-    height: 100%;
-    transition: all 0.6s ease-in-out;
-}
 
-.sign-in{
-    left: 0;
-    width: 50%;
-    z-index: 2;
-}
-
-.sign_container.active .sign-in{
-    transform: translateX(100%);
-}
-
-.sign-up{
-    left: 0;
-    width: 50%;
-    opacity: 0;
-    z-index: 1;
-}
-
-.container.active .sign-up{
-    transform: translateX(100%);
-    opacity: 1;
-    z-index: 5;
-    animation: move 0.6s;
-}
-
-@keyframes move{
-    0%, 49.99%{
-        opacity: 0;
-        z-index: 1;
-    }
-    50%, 100%{
-        opacity: 1;
-        z-index: 5;
-    }
-}
-.toggle-container{
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
-    transition: all 0.6s ease-in-out;
-    border-radius: 20px;
-    z-index: 100;
-}
-
-.container.active .toggle-container{
-    transform: translateX(-100%);
-    border-radius: 20px;
-}
-
-.toggle{
-    background-color: #335E4A;
-    height: 100%;
-    color: #fff;
-    position: relative;
-    left: -100%;
-    height: 100%;
-    width: 200%;
-    transform: translateX(0);
-    transition: all 0.6s ease-in-out;
-}
-.sign_container.active .toggle{
-    transform: translateX(50%);
-}
-
-.toggle-panel{
-    position: absolute;
-    width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 30px;
-    text-align: center;
-    top: 0;
-    transform: translateX(0);
-    transition: all 0.6s ease-in-out;
-}
 .toggle-panel h1{
     font-size: 40px;
     font-weight: 600;
@@ -273,16 +176,117 @@ input[type="tel"]{
 .outer_sign_container{
     padding-block: 100px;
 }
+@media (min-width: 768px){
+    .sign_container{
+        background-color: #fff;
+        border-radius: 30px;
+        box-shadow: 0 5px 15px #ccc;
+        position: relative;
+        overflow: hidden;
+        width: 870px;
+        max-width: 100%;
+        min-height: 480px;
+        /* margin-block: 100px; */
+    }
+    .form-container{
+        position: absolute;
+        top: 0;
+        height: 100%;
+        transition: all 0.6s ease-in-out;
+    }
+    
+    .sign-in{
+        left: 0;
+        width: 50%;
+        z-index: 2;
+    }
+    
+    .sign_container.active .sign-in{
+        transform: translateX(100%);
+    }
+    
+    .sign-up{
+        left: 0;
+        width: 50%;
+        opacity: 0;
+        z-index: 1;
+    }
+    
+    .container.active .sign-up{
+        transform: translateX(100%);
+        opacity: 1;
+        z-index: 5;
+        animation: move 0.6s;
+    }
+    
+    @keyframes move{
+        0%, 49.99%{
+            opacity: 0;
+            z-index: 1;
+        }
+        50%, 100%{
+            opacity: 1;
+            z-index: 5;
+        }
+    }
+    .toggle-container{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+        transition: all 0.6s ease-in-out;
+        border-radius: 20px;
+        z-index: 100;
+    }
+    
+    .container.active .toggle-container{
+        transform: translateX(-100%);
+        border-radius: 20px;
+    }
+    
+    .toggle{
+        background-color: #335E4A;
+        height: 100%;
+        color: #fff;
+        position: relative;
+        left: -100%;
+        height: 100%;
+        width: 200%;
+        transform: translateX(0);
+        transition: all 0.6s ease-in-out;
+    }
+    .sign_container.active .toggle{
+        transform: translateX(50%);
+    }
+    
+    .toggle-panel{
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 30px;
+        text-align: center;
+        top: 0;
+        transform: translateX(0);
+        transition: all 0.6s ease-in-out;
+    }
+}
 @media only screen and (max-width: 768px){
         /* Start Sign Page */
         .outer_sign_container{
             padding-inline: 12px;
+            padding-block: 70px;
         }
         form h1{
             font-size: 24px;
         }
         .sign_container form{
-            padding: 0 8px;
+            padding: 0 14px;
         }
         .toggle-panel{
             padding: 0 10px;
@@ -291,16 +295,16 @@ input[type="tel"]{
             width: 124px;
         }
         .toggle-panel h1{
-            font-size: 24px;
+            font-size: 28px;
         }
         .sign_container p{
             font-size: 12px;
             margin: 10px 0;
         }
-        .sign_container button{
+        /* .sign_container button{
             font-size: 12px;
             padding: 8px 24px;
-        }
+        } */
         .sign-in .form-group label, .sign-in .form-group + a, .sign_container input:not([type="checkbox"]), .flag span{
             font-size: 12px;
         }
@@ -321,5 +325,62 @@ input[type="tel"]{
         }
         .flag{
             width: 40px;
+        }
+        .toggle-right:before, .toggle-left:before{
+            display: none;
+        }
+        .sign-up, .sign-in{
+            position: relative;
+            width: 100%;
+            padding-block: 32px;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+        .toggle-container{
+            display: none;
+        }
+        .sign-in{
+            display: none;
+        }
+        .sign-in.active{
+            display: block;
+        }
+        .form-container:not(.active){
+            display: none;
+        }
+        .sign-up::before, .sign-in::before{
+            position: absolute;
+            width: 100%;
+            z-index: 2;
+            opacity: 0.1;
+            width: 100%;
+            left: 0;
+            top: 0;
+        }
+        .sign-up::before{
+            content: url( " ../img/Green rec.png");
+        }
+        .sign-in::before{
+            content: url( " ../img/Green rec (1).png");
+        }
+        .sign-up:after, .sign-in::after{
+            background-color: #335E4A;
+            content: "";
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            left: 0;
+            top: 0;
+            height: 100%;
+        }
+        .sign-up form, .sign-in form{
+            position: relative;
+            z-index: 99;
+        }
+        .sign_container form{
+            background-color: unset;
+        }
+        .sign-up .form-text, form h1, .sign-in .form-text, .sign-in .form-group label, .sign-in .form-group + a{
+            color: #fff;
         }
 }
