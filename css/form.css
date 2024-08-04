@@ -164,6 +164,25 @@ input[type="tel"]{
 .outer_sign_container{
     padding-block: 100px;
 }
+.requirement-list li i {
+    width: 20px;
+    color: #ff204e;
+    font-size: 1rem;
+}
+.password_condition, .requirement-list li span {
+    font-size: 18px;
+    color: #333;
+}
+.requirement-list {
+    margin-block: 12px;
+}
+.requirement-list li.valid i {
+    font-size: 18px;
+    color: #87a922;
+}
+.requirement-list li.valid span {
+    color: #999;
+}
 @media (min-width: 768px){
     .sign_container{
         background-color: #fff;
@@ -173,7 +192,7 @@ input[type="tel"]{
         overflow: hidden;
         width: 870px;
         max-width: 100%;
-        min-height: 480px;
+        min-height: 600px;
     }
     .form-container{
         position: absolute;
